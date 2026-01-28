@@ -1,26 +1,14 @@
-import { Users, Code, Briefcase } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Users, Code, Briefcase, CheckCircle } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Experience = () => {
-  const highlights = [
-    {
-      icon: Users,
-      title: "Technical Leadership",
-      description:
-        "Led and managed cross-functional technical teams, driving project delivery and maintaining high code quality standards across multiple projects.",
-    },
-    {
-      icon: Code,
-      title: "Hands-On Development",
-      description:
-        "Actively involved in architecture decisions, code reviews, and hands-on development across the full stack, from backend APIs to frontend interfaces.",
-    },
-    {
-      icon: Briefcase,
-      title: "Multi-Sector Experience",
-      description:
-        "Delivered impactful solutions across HealthTech, PropTech, FinTech, and Government sectors with visibility in multiple countries.",
-    },
+  const expertise = [
+    "Technical Leadership & Team Management",
+    "Full-Stack Architecture & Development",
+    "Cross-Sector Experience (HealthTech, PropTech, FinTech, Government)",
+    "Global Project Delivery & Visibility",
+    "Developer Mentorship & Community Building",
+    "Agile Methodologies & Best Practices",
   ];
 
   const stats = [
@@ -42,6 +30,46 @@ const Experience = () => {
           </h2>
         </div>
 
+        {/* Profile + Expertise */}
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+          {/* Picture Placeholder */}
+          <div className="flex justify-center">
+            <div className="relative">
+              <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border-2 border-primary/30 flex items-center justify-center overflow-hidden">
+                <Avatar className="w-full h-full rounded-2xl">
+                  <AvatarImage 
+                    src="/placeholder.svg" 
+                    alt="Segun Salako"
+                    className="object-cover"
+                  />
+                  <AvatarFallback className="text-6xl font-bold bg-secondary text-primary rounded-2xl w-full h-full">
+                    SS
+                  </AvatarFallback>
+                </Avatar>
+              </div>
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl" />
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
+            </div>
+          </div>
+
+          {/* Expertise Pointers */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-semibold mb-6">Core Expertise</h3>
+            {expertise.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-4 p-4 rounded-xl bg-secondary/50 border border-border hover:border-primary/30 transition-colors"
+              >
+                <div className="p-2 rounded-lg bg-primary/10">
+                  <CheckCircle className="text-primary" size={20} />
+                </div>
+                <span className="text-foreground font-medium">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, index) => (
@@ -57,25 +85,8 @@ const Experience = () => {
           ))}
         </div>
 
-        {/* Highlights */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {highlights.map((item, index) => (
-            <Card key={index} className="card-hover bg-card border-border">
-              <CardContent className="p-6">
-                <div className="p-3 rounded-lg bg-primary/10 w-fit mb-4">
-                  <item.icon className="text-primary" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {item.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
         {/* Mentorship Note */}
-        <div className="mt-16 text-center p-8 rounded-xl bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 border border-primary/20">
+        <div className="text-center p-8 rounded-xl bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 border border-primary/20">
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Beyond technical work, I'm passionate about{" "}
             <span className="text-foreground font-medium">
