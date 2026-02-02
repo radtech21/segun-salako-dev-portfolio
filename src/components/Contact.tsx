@@ -3,9 +3,9 @@ import ContactDialog from "./ContactDialog";
 
 const Contact = () => {
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+    { icon: Github, href: "https://github.com/radtech21", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/segun-salako-a26922121/", label: "LinkedIn" },
+    { icon: Twitter, href: "https://twitter.com/ayosalaks", label: "Twitter" },
   ];
 
   return (

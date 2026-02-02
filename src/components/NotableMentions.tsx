@@ -1,58 +1,56 @@
-import { Newspaper, Mic, BookOpen, Radio, Video, Quote } from "lucide-react";
+import { Newspaper, Mic, BookOpen, Radio, Video, Quote, Building2,  Landmark,  ShieldCheck,  Users,} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 
 const NotableMentions = () => {
   const mentions = [
-    {
-      icon: Newspaper,
-      type: "Press",
-      title: "TechCabal Feature",
-      source: "TechCabal",
-      description: "Featured in 'Top 50 African Tech Leaders Shaping the Future' annual list.",
-      link: "#",
-    },
-    {
-      icon: Mic,
-      type: "Speaking",
-      title: "DevFest Africa Keynote",
-      source: "Google Developer Groups",
-      description: "Delivered keynote on 'Scaling Engineering Teams in Emerging Markets' to 2,000+ attendees.",
-      link: "#",
-    },
-    {
-      icon: BookOpen,
-      type: "Publication",
-      title: "Technical Architecture Guide",
-      source: "Medium",
-      description: "Published comprehensive guide on microservices architecture with 50K+ reads.",
-      link: "#",
-    },
-    {
-      icon: Radio,
-      type: "Podcast",
-      title: "The African Tech Podcast",
-      source: "Spotify",
-      description: "Guest episode discussing fintech innovation and the future of digital banking in Africa.",
-      link: "#",
-    },
-    {
-      icon: Video,
-      type: "Conference",
-      title: "AWS re:Invent Speaker",
-      source: "Amazon Web Services",
-      description: "Presented case study on cloud migration strategies for enterprise applications.",
-      link: "#",
-    },
-    {
-      icon: Quote,
-      type: "Interview",
-      title: "Leadership Insights",
-      source: "The Guardian Nigeria",
-      description: "In-depth interview on building tech talent pipelines and mentorship programs.",
-      link: "#",
-    },
-  ];
+  {
+    icon: Newspaper,
+    type: "Press",
+    title: "Disrupt Africa – e-Estates Fundraising",
+    source: "Disrupt Africa",
+    description:
+      "Coverage of E-Estates’ fundraising and growth, highlighting the platform’s mission to simplify estate management, with Segun Salako serving as CTO.",
+    link: "https://disruptafrica.com/2018/05/25/nigerias-e-estates-put-convenience-at-residents-fingertips/",
+  },
+  {
+    icon: Building2,
+    type: "Press",
+    title: "Honeywell Group / Itanna Investment",
+    source: "Honeywell Group (Itanna)",
+    description:
+      "Official announcement of Itanna’s $30,000 investment in e-Estates, supporting the company’s expansion and technology roadmap.",
+    link: "https://www.honeywellgroup.com/updates/press-releases/54",
+  },
+  {
+    icon: Landmark,
+    type: "Press",
+    title: "CcHUB Venture Support – e-Estates",
+    source: "Co-Creation Hub (CcHUB)",
+    description:
+      "Recognition of e-Estates’ $100,000 funding and venture support from CcHUB, backing its role in modernising property management in Nigeria.",
+    link: "https://cchub.africa/venture/e-estate/",
+  },
+  {
+    icon: ShieldCheck,
+    type: "Government / Public Sector",
+    title: "Oyo State Digital Ticketing System",
+    source: "THISDAY Newspaper (Nigeria)",
+    description:
+      "Coverage of the digital transport ticketing system developed for Oyo State, enhancing safety, transparency, and accountability during COVID-era operations.",
+    link: "https://www.thisdaylive.com/2021/03/18/digital-ticketing-system-enhances-safety-and-transparency-in-oyo-states-covid-era-transport-operations/",
+  },
+  {
+    icon: Users,
+    type: "Community Impact",
+    title: "JoyLabs Youth Initiative",
+    source: "JoyLabs / RadiiTech",
+    description:
+      "Recognition of contributions to youth development and technology empowerment through the JoyLabs Youth Initiative.",
+    link: "https://joylabs.radiitech.tech",
+  },
+];
 
   const typeColors: Record<string, string> = {
     Press: "bg-blue-500/10 text-blue-400 border-blue-500/30",
@@ -84,34 +82,44 @@ const NotableMentions = () => {
               key={index}
               className="card-hover bg-card border-border group"
             >
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors shrink-0">
-                    <mention.icon className="text-primary" size={24} />
-                  </div>
+                <CardContent className="p-6">
+                  <a
+                    href={mention.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block group"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors shrink-0">
+                        <mention.icon className="text-primary" size={24} />
+                      </div>
 
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-2 flex-wrap">
-                      <Badge
-                        variant="outline"
-                        className={`text-xs ${typeColors[mention.type]}`}
-                      >
-                        {mention.type}
-                      </Badge>
-                      <span className="text-xs text-muted-foreground">
-                        {mention.source}
-                      </span>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-2 flex-wrap">
+                          <Badge
+                            variant="outline"
+                            className={`text-xs ${typeColors[mention.type]}`}
+                          >
+                            {mention.type}
+                          </Badge>
+                          <span className="text-xs text-muted-foreground">
+                            {mention.source}
+                          </span>
+                        </div>
+
+                        <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                          {mention.title}
+                          <span className="ml-1 text-xs opacity-60">↗</span>
+                        </h3>
+
+                        <p className="text-muted-foreground text-sm leading-relaxed">
+                          {mention.description}
+                        </p>
+                      </div>
                     </div>
+                  </a>
+                </CardContent>
 
-                    <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
-                      {mention.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {mention.description}
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
             </Card>
           ))}
         </div>

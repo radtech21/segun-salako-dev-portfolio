@@ -11,7 +11,7 @@ const Footer = () => {
           </div>
 
           <p className="text-muted-foreground text-sm text-center">
-            © {currentYear} Segun Salako. Built with passion and code.
+            © {currentYear} Segun Salako. Built with passion.
           </p>
 
           <p className="text-muted-foreground text-sm font-mono">

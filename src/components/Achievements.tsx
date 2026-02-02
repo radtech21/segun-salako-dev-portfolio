@@ -1,45 +1,52 @@
-import { Trophy, Star, Target, Medal, Sparkles, Zap } from "lucide-react";
+import { Trophy, Star, Target, Medal, Sparkles, Zap, Users,  Globe,  Award, Rocket, } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Achievements = () => {
   const achievements = [
-    {
-      icon: Trophy,
-      title: "Tech Leadership Excellence Award",
-      description: "Recognized for outstanding technical leadership and team development across multiple high-impact projects.",
-      year: "2023",
-    },
-    {
-      icon: Star,
-      title: "Innovation in FinTech",
-      description: "Awarded for pioneering digital banking solutions that transformed customer experience for 500K+ users.",
-      year: "2022",
-    },
-    {
-      icon: Target,
-      title: "Project Delivery Champion",
-      description: "Successfully delivered 15+ enterprise projects on time and within budget across 3 continents.",
-      year: "2022",
-    },
-    {
-      icon: Medal,
-      title: "AWS Community Builder",
-      description: "Selected as an AWS Community Builder for contributions to cloud computing education and advocacy.",
-      year: "2021",
-    },
-    {
-      icon: Sparkles,
-      title: "Top Mentor Award",
-      description: "Honored for mentoring 100+ junior developers through bootcamps and community programs.",
-      year: "2021",
-    },
-    {
-      icon: Zap,
-      title: "Hackathon Grand Prize",
-      description: "Led winning team at Pan-African Tech Summit hackathon with an innovative healthcare solution.",
-      year: "2020",
-    },
-  ];
+  {
+    icon: Users,
+    title: "Scaled User-Focused Applications",
+    description:
+      "Designed and built production applications serving over 5,000 active users across Southern Africa, with a focus on reliability, performance, and user experience.",
+    year: "—",
+  },
+  {
+    icon: Rocket,
+    title: "CTO & Co-Builder of e-Estates",
+    description:
+      "Co-built and led the technical development of e-Estates, a digital property management platform used by over 5,000+ residents across Nigeria.",
+    year: "—",
+  },
+  {
+    icon: Globe,
+    title: "Multi-Country Product Delivery",
+    description:
+      "Built, deployed, and delivered production-grade applications across 6+ countries, collaborating with distributed teams and diverse stakeholders.",
+    year: "—",
+  },
+  {
+    icon: Award,
+    title: "Recognition for Software Education Impact",
+    description:
+      "Awarded formal recognition for contributions to software education and technology capacity-building initiatives in Oyo State, Nigeria.",
+    year: "—",
+  },
+  {
+    icon: Sparkles,
+    title: "JoyLabs Youth Initiative – Founder & Pioneer",
+    description:
+      "Featured as a pioneer and founder of the JoyLabs Youth Initiative, focused on empowering young people through technology, innovation, and mentorship.",
+    year: "—",
+  },
+  {
+    icon: Trophy,
+    title: "Innovative & Impact-Driven Projects",
+    description:
+      "Consistently delivered innovative, high-impact software products across Nigeria and international markets, spanning public-sector and private-sector use cases.",
+    year: "—",
+  },
+];
+
 
   return (
     <section id="achievements" className="py-24 px-6">

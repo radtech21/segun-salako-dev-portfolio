@@ -20,8 +20,8 @@ const About = () => {
     "AWS Solutions Architect",
     "AWS Developer Associate",
     "AWS Cloud Practitioner",
-    "CompTIA Security+",
-    "CompTIA Network+",
+    "AWS Cloud Practitioner",
+    "AWS Cloud Practitioner",
     "CompTIA A+",
   ];
 

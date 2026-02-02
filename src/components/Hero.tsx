@@ -31,7 +31,7 @@ const Hero = () => {
         
         <div className="section-fade section-fade-delay-3 flex items-center justify-center gap-6">
           <a
-            href="https://github.com"
+            href="https://github.com/radtech21"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors duration-300"
@@ -39,7 +39,7 @@ const Hero = () => {
             <Github size={24} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/segun-salako-a26922121/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors duration-300"

@@ -5,15 +5,14 @@ const Experience = () => {
   const expertise = [
     "Technical Leadership & Team Management",
     "Full-Stack Architecture & Development",
-    "Cross-Sector Experience (HealthTech, PropTech, FinTech, Government)",
+    "Cross-Sector Experience (HealthTech, PropTech, FinTech, Enterprise Scale Solutions)",
     "Global Project Delivery & Visibility",
     "Developer Mentorship & Community Building",
-    "Agile Methodologies & Best Practices",
   ];
 
   const stats = [
-    { value: "10+", label: "Years Experience" },
-    { value: "50+", label: "Projects Delivered" },
+    { value: "7+", label: "Years Experience" },
+    { value: "30+", label: "Projects Delivered" },
     { value: "6+", label: "Countries" },
     { value: "100+", label: "Developers Mentored" },
   ];
@@ -38,7 +37,7 @@ const Experience = () => {
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border-2 border-primary/30 flex items-center justify-center overflow-hidden">
                 <Avatar className="w-full h-full rounded-2xl">
                   <AvatarImage 
-                    src="/placeholder.svg" 
+                    src="/segun.jpg" 
                     alt="Segun Salako"
                     className="object-cover"
                   />
